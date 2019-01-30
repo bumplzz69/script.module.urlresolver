@@ -1,9 +1,9 @@
-# Addon Name: ResolveURL
-# Addon id: script.module.resolveurl
+# Addon Name: URLResolver
+# Addon id: script.module.urlresolver
 # Addon Provider: 
 msgid ""
 msgstr ""
-"Project-Id-Version: script.module.resolveurl\n"
+"Project-Id-Version: script.module.urlresolver\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2017-09-24 17:07+0300\n"
 "Last-Translator: A. Dambledore\n"

@@ -1,5 +1,5 @@
 """
-    ResolveURL Addon for Kodi
+    URLResolver Addon for Kodi
     Copyright (C) 2016 t0mm0, tknorris
 
     This program is free software: you can redistribute it and/or modify
@@ -16,10 +16,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import sys
-from resolveurl.lib import kodi
-from resolveurl.lib import log_utils
-from resolveurl.lib import cache
-from resolveurl.lib.url_dispatcher import URL_Dispatcher
+from urlresolver.lib import kodi
+from urlresolver.lib import log_utils
+from urlresolver.lib import cache
+from urlresolver.lib.url_dispatcher import URL_Dispatcher
 
 logger = log_utils.Logger.get_logger()
 url_dispatcher = URL_Dispatcher()
@@ -33,7 +33,7 @@ MODES = __enum(AUTH_PM='auth_pm', RESET_PM='reset_pm', AUTH_RD='auth_rd', RESET_
 def auth_pm():
     kodi.close_all()
     kodi.sleep(500)  # sleep or authorize won't work for some reason
-    from resolveurl.plugins import premiumize_me
+    from urlresolver.plugins import premiumize_me
     if premiumize_me.PremiumizeMeResolver().authorize_resolver():
         kodi.notify(msg=kodi.i18n('pm_authorized'), duration=5000)
 
@@ -41,7 +41,7 @@ def auth_pm():
 def reset_pm():
     kodi.close_all()
     kodi.sleep(500)  # sleep or reset won't work for some reason
-    from resolveurl.plugins import premiumize_me
+    from urlresolver.plugins import premiumize_me
     pm = premiumize_me.PremiumizeMeResolver()
     pm.reset_authorization()
     kodi.notify(msg=kodi.i18n('pm_auth_reset'), duration=5000)
@@ -50,7 +50,7 @@ def reset_pm():
 def auth_rd():
     kodi.close_all()
     kodi.sleep(500)  # sleep or authorize won't work for some reason
-    from resolveurl.plugins import realdebrid
+    from urlresolver.plugins import realdebrid
     if realdebrid.RealDebridResolver().authorize_resolver():
         kodi.notify(msg=kodi.i18n('rd_authorized'), duration=5000)
 
@@ -58,7 +58,7 @@ def auth_rd():
 def reset_rd():
     kodi.close_all()
     kodi.sleep(500)  # sleep or reset won't work for some reason
-    from resolveurl.plugins import realdebrid
+    from urlresolver.plugins import realdebrid
     rd = realdebrid.RealDebridResolver()
     rd.reset_authorization()
     kodi.notify(msg=kodi.i18n('rd_auth_reset'), duration=5000)
@@ -67,7 +67,7 @@ def reset_rd():
 def auth_ad():
     kodi.close_all()
     kodi.sleep(500)  # sleep or authorize won't work for some reason
-    from resolveurl.plugins import alldebrid
+    from urlresolver.plugins import alldebrid
     if alldebrid.AllDebridResolver().authorize_resolver():
         kodi.notify(msg=kodi.i18n('ad_authorized'), duration=5000)
 
@@ -75,7 +75,7 @@ def auth_ad():
 def reset_ad():
     kodi.close_all()
     kodi.sleep(500)  # sleep or reset won't work for some reason
-    from resolveurl.plugins import alldebrid
+    from urlresolver.plugins import alldebrid
     ad = alldebrid.AllDebridResolver()
     ad.reset_authorization()
     kodi.notify(msg=kodi.i18n('ad_auth_reset'), duration=5000)

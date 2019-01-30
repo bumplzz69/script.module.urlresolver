@@ -110,7 +110,7 @@
 			<height>90</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$ADDON[script.module.resolveurl 33038]</label>
+			<label>$ADDON[script.module.urlresolver 33038]</label>
 			<font>font12_title</font>
             <visible>String.StartsWith(System.BuildVersion, 17)|String.StartsWith(System.BuildVersion, 18)</visible>
 		</control>
@@ -122,7 +122,7 @@
             <height>45</height>
             <align>center</align>
             <aligny>center</aligny>
-            <label>$ADDON[script.module.resolveurl 33038]</label>
+            <label>$ADDON[script.module.urlresolver 33038]</label>
             <font>font12_title</font>
             <visible>![SubString(System.BuildVersion,17,left)|SubString(System.BuildVersion,18,left)]</visible>
         </control>

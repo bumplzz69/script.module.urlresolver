@@ -1,5 +1,5 @@
-# Addon Name: ResolveURL
-# Addon id: script.module.resolveurl
+# Addon Name: URLResolver
+# Addon id: script.module.urlresolver
 # Addon Provider:
 # Translators:
 # tknorris, 2016
